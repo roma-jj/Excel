@@ -12,7 +12,8 @@
         "linebreak-style": "off",
         "indent": "off",
         "comma-dangle": "off",
-        "require-jsdoc": "off"
+        "require-jsdoc": "off",
+        "no-trailing-spaces": "off"
     },
     "extends": [
         "eslint:recommended", 
