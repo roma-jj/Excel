@@ -13,7 +13,8 @@
         "indent": "off",
         "comma-dangle": "off",
         "require-jsdoc": "off",
-        "no-trailing-spaces": "off"
+        "no-trailing-spaces": "off",
+        "operator-linebreak": "off"
     },
     "extends": [
         "eslint:recommended", 
