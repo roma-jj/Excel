@@ -49,9 +49,44 @@ class Dom {
 
         return this;
     }
+
+    get data() {
+        return this.$el.dataset;
+    }
+
+    closest(selector) {
+        return $(this.$el.closest(selector));
+    }
+
+    getCoords() {
+        return this.$el.getBoundingClientRect();
+    }
+
+    findAll(selector) {
+        return this.$el.querySelectorAll(selector);
+    }
+
+    css(styles = {}) {
+        // for (let key in styles) {
+        //     console.log(styles[key]);
+        // }
+
+        // --- 'for in' cycle is running on 
+        // --- properties and methods of prototype too !!!
+
+        // for (let key in styles) {
+        //     if (styles.hasOwnProperty(key)) {
+        //         console.log(styles[key]);
+        //     }
+        // }
+
+        Object
+            .keys(styles)
+            .forEach(key => this.$el.style[key] = styles[key]);
+    }
 }
 
-// '$'
+// $(document.querySelector(selector)) - DOM Element
 export function $(selector) {
     return new Dom(selector);
 }
